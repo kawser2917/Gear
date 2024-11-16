@@ -23,6 +23,14 @@
     align-items: center;
 }
 
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-style: normal;
+    text-align: center;
+}
+
+
 /* Header section */
 header nav {
     display: flex;
@@ -63,39 +71,113 @@ nav ul li a {
 .section-description {
     color: var(--primary-color);
 }
-.banner-img{
+
+.banner-img {
     background: url(../images/Circle\ design.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.banner-img img{
+
+.banner-img img {
     width: 100%;
+}
+
+.logo-images {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Collestion section design */
+.collection {
+    margin-top: 100px;
+}
+.card-collections{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.card {
+    border-radius: 5px;
+    width: 329px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 14px;
+}
+.card img{
+    width: 100%;
+}
+/* Feature section */
+.feature-container{
+    max-width: 1440px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 96px;
+}
+.feature-container img{
+    width: 100%;
+}
+/* footer section */
+footer{
+    background-color: #000000DE;
+}
+.footer-container{
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 40px;
 }
 
 
 /* Small Device */
 @media screen and (max-width:576px) {
-    header nav {
+    header nav
+     {
         flex-direction: column;
         padding: 80px 0;
     }
-    .banner{
+
+    .banner,
+    .feature-container{
         flex-direction: column-reverse;
     }
-    .banner-title{
+
+    .banner-title {
         font-size: 1.8rem;
     }
-    .banner-content{
+
+    .banner-content {
         text-align: center;
     }
-    .btn{
+
+    .btn {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    nav ul{
+
+    nav ul {
         gap: 1rem;
     }
+
+    .logo-images {
+        flex-wrap: wrap;
+    }
+    .card-container{
+        grid-template-columns: 1fr;
+    }
+
 }
 
 /* Medium Device */
@@ -103,5 +185,9 @@ nav ul li a {
     header nav {
         flex-direction: column;
         padding: 80px 0;
+    }
+
+    .logo-images {
+        flex-wrap: wrap;
     }
 }
